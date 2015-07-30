@@ -6,3 +6,10 @@ Upload this to wp-content/plugins or Install the .zip file by going to Plugins>A
 
 Once the plugin is activated, head over to WP-Admin>GForms Submit Button Hack. 
 Follow The Instructions there. Simple as that! 
+
+
+##Option 1
+The first option will ask you you the gravity form ID#. Say you want to change the submit button text on gravity form ID#5. The first option value should look like gform_submit_button_1
+
+##Option 2
+Just enter in the new submit button text.
