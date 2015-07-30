@@ -45,7 +45,7 @@ function gforms_submit_button_hack() {
                 </tr>
 
                 <tr valign="top">
-                    <th scope="row">Some Other Option</th>
+                    <th scope="row">Change the Submit Button Text/th>
                     <td><input type="text" name="some_other_option" size="35" value="<?php echo esc_attr( get_option('some_other_option') ); ?>" /></td>
                     <td>Enter in the text that you would like to change the submit button to say</td>
                 </tr>
