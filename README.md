@@ -1,5 +1,6 @@
 # Gravity-Forms-Submit-Button-Hack
 Gravity Forms Submit Button Hack
+This is a very simple way to change the submit button text of a gravity form. It's also the same thing as changing the text in the actual form iteself.
 
 Upload this to wp-content/plugins or Install the .zip file by going to Plugins>Add New>Upload Plugin
 
