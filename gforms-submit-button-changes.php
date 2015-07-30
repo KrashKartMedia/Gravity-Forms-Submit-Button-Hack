@@ -11,12 +11,12 @@ Text Domain: gforms-submit
 */
 
 // create custom plugin settings menu
-add_action('admin_menu', 'my_cool_plugin_create_menu');
+add_action('admin_menu', 'gforms_hack_submit_create_menu');
 
-function my_cool_plugin_create_menu() {
+function gforms_hack_submit_create_menu() {
 
     //create new top-level menu
-    add_menu_page('Gforms Submit Button Hack', 'Gforms Submit Button Hack', 'administrator', __FILE__, 'gforms_submit_button_hack' , plugins_url('/images/icon.png', __FILE__) );
+    add_menu_page('Gforms Submit Button Hack', 'Gforms Submit Button Hack', 'administrator', __FILE__, 'gforms_submit_button_hack');
 
     //call register settings function
     add_action( 'admin_init', 'register_gfroms_hack_submit_plugin_settings' );
@@ -41,11 +41,12 @@ function gforms_submit_button_hack() {
                 <tr valign="top">
                     <th scope="row">What is the form Id?</th>
                     <td><input type="text" name="new_option_name" size="35" value="<?php echo esc_attr( get_option('new_option_name') ); ?>" /></td>
-                    <td>example: <b>gform_submit_button_1</b> - change the 1 to match your form ID #. If you are changing gravity form id #5, you would change this to gform_submit_button_5</td>
+                    <td><p>Example: <b>gform_submit_button_1</b> - change the 1 to match your form ID #. If you are changing gravity form id #5, you would change this to gform_submit_button_5</p>
+                        <p>If you change the form id# from _1 to _2,  _1 will reset to the default submit button text</p></td>
                 </tr>
 
                 <tr valign="top">
-                    <th scope="row">Change the Submit Button Text/th>
+                    <th scope="row">Change the Submit Button Text</th>
                     <td><input type="text" name="some_other_option" size="35" value="<?php echo esc_attr( get_option('some_other_option') ); ?>" /></td>
                     <td>Enter in the text that you would like to change the submit button to say</td>
                 </tr>
@@ -62,7 +63,7 @@ $gforms_submit_russ = get_option( 'new_option_name' );
 add_filter( $gforms_submit_russ, 'change_the_submit_button_for_me', 10, 2 );
 function change_the_submit_button_for_me( $button, $form, $kyle ) {
     $kyle = get_option( 'some_other_option' );
-    return "<button class='button' id='gchange_the_submit_button_for_me_{$form['id']}'><span>$kyle</span></button>";
+    return "<button class='button' id='gform_submit_button_{$form['id']}'><span>$kyle</span></button>";
 }
 
 ?>
