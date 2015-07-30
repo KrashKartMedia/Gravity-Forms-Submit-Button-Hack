@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Gforms submit button changes
-Plugin URI: http://russellaaron.vegas
+Plugin URI: https://github.com/KrashKartMedia/Gravity-Forms-Submit-Button-Hack
 Description: Change the submit button text on a gravity form
 Version: 1.0.0
 Author: Russell Aaron
